@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2  # Fixed checkout action
+        uses: actions/checkout@v2  # Corrected checkout action
 
       - name: Set up Python
         uses: actions/setup-python@v2
@@ -26,7 +26,7 @@ jobs:
           pip install pandas scikit-learn seaborn
 
       - name: Run Unit Tests
-        run: python -m unittest discover -s tests -p "*.py"  # Ensures tests are in the "tests" directory
+        run: python -m unittest iris_project_test.py  # Runs the specific test script
 
   deploy:
     runs-on: ubuntu-latest
